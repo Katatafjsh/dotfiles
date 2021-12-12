@@ -1,5 +1,13 @@
-- clean: ['~']
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~', '~/.config']
 
 - link:
-    ~/.config/karabiner: karabiner
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
 
