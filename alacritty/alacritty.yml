@@ -553,7 +553,7 @@ colors:  *atelier_health
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /opt/homebrew/bin/fish
+  program: /usr/local/bin/fish
     #  args:
     #    - -l
     #    - -c
