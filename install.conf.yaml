@@ -7,6 +7,7 @@
 
 - link:
     ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
