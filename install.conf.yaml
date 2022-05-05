@@ -8,6 +8,8 @@
 - link:
     ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
     ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/alacritty/colors/dracula.yml: alacritty/colors/dracula.yml
+    ~/.config/alacritty/colors/tokyonight.yml: alacritty/colors/tokyonight.yml
     ~/.config/tmux/tmux.conf: tmux/tmux.conf
 
 - shell:
