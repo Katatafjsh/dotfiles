@@ -1,0 +1,122 @@
+import:
+  - ~/.config/alacritty/colors/gruvbox-dark.yml
+
+live_config_reload: true
+
+env:
+  TERM: xterm-256color # OR alacritty 
+  LANG: en_US.UTF-8
+
+# Default:
+#   - (macOS) /bin/bash --login
+#   - (Linux/BSD) user login shell
+#   - (Windows) powershell
+
+shell:
+  program: /usr/local/bin/fish
+    #  args:
+    #    - -l
+    #    - -c
+    #    - "tmux attach || tmux"
+
+selection:
+  save_to_clipboard: true
+  text: CellBackground
+
+window:
+  opacity: 0.90
+  dynamic_title: true
+  dynamic_padding: false
+  
+  dimensions:
+    columns: 156
+    lines: 50
+
+  padding:
+    x: 0
+    y: 0
+
+# full, none | transparent, buttonless (macOS)
+  decorations: buttonless
+
+# Windowed, Maximized, Fullscreen | SimpleFullscreen (macOS)
+startup_mode: Windowed
+
+scrolling:
+  history: 0
+
+mouse:
+  hide_when_typing: true 
+
+font:
+  normal:
+    family: "Hack Nerd Font Mono"
+    style: Regular
+  bold:
+    family: "Hack Nerd Font Mono"
+    style: Bold
+  italic:
+    family: "Hack Nerd Font Mono"
+    style: Italic
+  bold_italic:
+    family: "Hack Nerd Font Mono"
+    style: Bold Italic
+
+  # Point size
+  size: 13
+
+  offset:
+    x: 0
+    y: 0
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+  # Thin strokes are suitable for retina displays
+  use_thin_strokes: true 
+
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: On
+  blink_interval: 1000
+
+key_bindings:
+
+  - { key: F11,                                                   action: ToggleFullscreen }
+  - { key: Q,              mods: Control,                         action: Quit             }
+
+  - { key: Key0,           mods: Control,                         action: ResetFontSize    }
+  - { key: Equals,         mods: Control,                         action: IncreaseFontSize }
+  - { key: Plus,           mods: Control,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
+
+  - { key: Key0,           mods: Command,                         action: ResetFontSize    }
+  - { key: Equals,         mods: Command,                         action: IncreaseFontSize }
+  - { key: Plus,           mods: Command,                         action: IncreaseFontSize }
+  - { key: NumpadAdd,      mods: Command,                         action: IncreaseFontSize }
+  - { key: Minus,          mods: Command,                         action: DecreaseFontSize }
+  - { key: NumpadSubtract, mods: Command,                         action: DecreaseFontSize }
+
+# Features not needed because of tmux
+
+  # scrollback
+  - { key: PageUp,        mods: Shift,         mode: ~Alt,        action: ReceiveChar }
+  - { key: PageDown,      mods: Shift,         mode: ~Alt,        action: ReceiveChar }
+  - { key: Home,          mods: Shift,         mode: ~Alt,        action: ReceiveChar }
+  - { key: End,           mods: Shift,         mode: ~Alt,        action: ReceiveChar }
+  - { key: K,             mods: Command,       mode: ~Vi|~Search, action: ReceiveChar }
+  # searching
+  - { key: F,             mods: Control|Shift, mode: ~Search,     action: ReceiveChar }
+  - { key: F,             mods: Command,       mode: ~Search,     action: ReceiveChar }
+  - { key: B,             mods: Control|Shift, mode: ~Search,     action: ReceiveChar }
+  - { key: B,             mods: Command,       mode: ~Search,     action: ReceiveChar }
+
+mouse_bindings:
+  - { mouse: Right,  action: ReceiveChar }
+

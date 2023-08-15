@@ -1,0 +1,29 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true 
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+        
+    ~/.config/alacritty/alacritty.yml: alacritty/alacritty.yml
+    ~/.config/alacritty/colors/: 
+      glob: true 
+      path: alacritty/colors/*
+    
+    ~/.config/tmux/tmux.conf: tmux/tmux.conf
+    ~/.config/tmux/colors/: 
+      glob: true
+      path: tmux/colors/*
+
+    ~/.config/zellij/:
+      glob: true 
+      path: zellij/*
+
+    ~/.config/wezterm/wezterm.lua: wezterm/wezterm.lua
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
